@@ -334,6 +334,7 @@ def mycart(request):
     return render(request, 'cart.html', context)
 
 
+@login_required(login_url='signin')
 def removecart(request):
     if request.method == 'POST':
        removedish = Shopcart.objects.filter(user__username = request.user.username)
@@ -341,6 +342,7 @@ def removecart(request):
        messages.success(request, 'cart removed successfully')
     return redirect('mycart')
 
+@login_required(login_url='signin')
 def deletemeal(request):
     if request.method == 'POST':
         meal = request.POST['dishid']
@@ -377,6 +379,7 @@ def increase(request):
     return redirect('mycart')
 
 
+@login_required(login_url='signin')
 def checkout(request):
     profile = Profile.objects.get(user__username = request.user.username)
     shopcart = Shopcart.objects.filter(user__username = request.user.username, paid=False)
