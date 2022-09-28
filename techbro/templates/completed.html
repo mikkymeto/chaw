@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load humanize %}
+        
+{% block title %}{{profile.user.username|title}}'s Shopcart{% endblock title %}
+
+<!-- header     -->
+{% block header %}{% include 'header.html' %} {% endblock header %}
+<!--  header  -->
+
+
+<!-- special offers  -->
+<!-- {% block specials %}{% include 'specials.html' %} {% endblock specials %} -->
+
+
+   {% block content %}
+
+   <section class="mt-5">
+    <div class="container cart">
+      <h5>Dear {{profile.first_name|title}}, your transaction is successful</h5>
+      <h6>you will be dilivered in one hour</h6>
+      <p>Thank for your patronagw</p>
+    </div>
+   </section>
+
+  {% endblock content %}
+<!-- main content section ends   -->
+
+
+<!--- footer -->
+{% block footer %}{% include 'footer.html' %}{% endblock footer %}
+<!--- footer done -->

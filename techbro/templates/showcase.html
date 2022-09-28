@@ -1,0 +1,90 @@
+<section class="showcase">
+    <div>
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        
+        <div class="carousel-inner">
+          <div class="carousel-item active h-100">
+            {% comment %} {% if slide1 %} {% endcomment %}
+              <img src="{{slide1.show_img.url}}" class="d-block h-100">
+              <div class="carousel-caption">
+                <h5>{{slide1.show_name}}</h5>
+                <p>{{slide1.show_txt}}</p>
+              </div>
+            {% comment %} {% endif %} {% endcomment %}
+          </div>
+          
+            <div class="carousel-item h-100">
+              {% comment %} {% if slide2 %} {% endcomment %}
+                <img src="{{slide2.show_img.url}}" class="d-block h-100">
+                <div class="carousel-caption">
+                  <h5>{{slide2.show_name}}</h5>
+                  <p>{{slide2.show_txt}}</p>
+                </div>
+              {% comment %} {% endif %} {% endcomment %}
+            </div>
+            
+            
+
+            <div class="carousel-item h-100">
+              {% comment %} {% if slide3 %} {% endcomment %}
+                <img src="{{slide3.show_img.url}}" class="d-block h-100">
+                <div class="carousel-caption">
+                  <h5>{{slide3.show_name}}</h5>
+                  <p>{{slide3.show_txt}}</p>
+                </div>
+              {% comment %} {% endif %} {% endcomment %}
+        
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span><i class="fa-solid fa-circle-left"></i></span>
+              <span class="visually-hidden">Previous</span> 
+             </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+             <span><i class="fa-solid fa-circle-arrow-right"></i></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        
+         
+        </div>
+      </div>
+    </div>
+</section>
+
+
+
+
+
+
+          <!-- {% comment %} <div class="carousel-item h-100">
+            <img src="images/chinese.jpg" class="d-block h-100">
+            <div class="carousel-caption">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item h-100">
+            <img src="images/burger.png" class="d-block h-100">
+            <div class="carousel-caption">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+          <!-- <span class="visually-hidden">Previous</span> -->
+        <!-- </button> -->
+        <!-- <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next"> -->
+          <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+          <!-- <span class="visually-hidden">Next</span> -->
+        <!-- </button> -->
+      <!-- </div> -->
+    <!-- </div> {% endcomment %} -->
+  

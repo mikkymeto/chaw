@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+<!-- header     -->
+{% block header %}{% include 'header.html' %} {% endblock header %}
+
+<!--  header  -->
+
+<!-- showcase  -->
+{% block showcase %}{% include 'showcase.html' %}{% endblock showcase %}
+<!-- showcase  -->
+
+<!-- special offers  -->
+{% block specials %}{% include 'specials.html' %} {% endblock specials %}
+<!-- special offers  -->
+
+{% block content %}
+    <section class="meals">
+        <div class="container">
+          <h2 class="text-center mt-5 mb-5"><i class="fa-solid fa-bowl-food"></i> Meals</h2>
+        </div>
+
+        <div class="container">
+          <div class="row justify-content-center gy-5 gx-4">
+            {% if categories %}
+              {% for item in categories %} 
+                    <div class="col-5 col-sm-4 col-md-3 col-lg-2 col-xl-4">
+                      <div class="card">  
+                        <a href="{% url 'all_food' %}"><img src="{{item.cat_image.url}}" class="card-img-top"></a>
+                        <div class="card-body text-center">
+                          <h3 class="card-title">{{item.cat_name}}</h3>
+                          <!-- <p class="card-text text-truncate">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                          <!-- <a href="#" class="btn btn-secondary"><i class="fa-solid fa-cart-arrow-down"></i></a> -->
+                        </div>
+                      </div>
+                    </div>
+                {% endfor %}
+              {% endif %}
+          </div>
+        </div>
+      </section>
+{% endblock content %}
+<!-- main content section ends   -->
+
+
+<!--- footer -->
+{% block footer %}{% include 'footer.html' %}{% endblock footer %}                                                                                                                                                                                                                                                                                                                                                       
+<!--- footer done -->

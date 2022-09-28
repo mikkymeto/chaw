@@ -1,0 +1,77 @@
+ {% extends 'base.html' %}
+
+ {% block title %} {{profile_data.user.username|title}} {% endblock title %}
+
+ <!-- header  -->
+
+{% block header %} {% include 'header.html' %} {% endblock header %}
+<!-- header done -->
+
+
+  {% block showcase %} {% include 'dash_banner.html' %}{% endblock showcase %}
+      
+      
+    
+    {% block content %}
+    <section class="bigger">
+        <div class="row text-center">
+            
+            <div class="col-5 col-sm-6 col-md-3 col-lg-2 col-xl-4">
+              <div class="navbox">
+                <!-- <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-user"></i>
+                  </button> -->
+                  <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                   
+                  </div> -->
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'passwordupdate' %}">Password</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'profileupdate' %}">Update Profile</a>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+
+            <div class="col-5 col-sm-6 col-md-3 col-lg-2 col-xl-8 base">
+                <div class="basic">
+                    <div class="basicheader">
+                        <h2>Basic Info</h2>
+                    </div>
+                    <div class="profileicon">
+                        <!-- <i class="fa-solid fa-user"></i> -->
+                        <img src="{{profile_data.profile_pix.url}}" style="width: 300px;">
+                    </div>
+                    <div class="info">         
+                        <p>First Name :{{profile_data.first_name|title}}</p>
+                        <p>Last Name : {{profile_data.last_name|title}}</p>
+                        <p>Email : {{profile_data.email}}</p>
+                        <p>Adress : {{profile_data.address}}</p>
+                        <p>City  : {{profile_data.city}}</p>
+                        <p>State : {{profile_data.state}}</p>
+                    </div>
+                </div>
+            </div>
+            
+          </div>
+    </section>
+
+      {% endblock content %}
+
+
+
+
+{% comment %} footer {% endcomment %}
+
+{% block footer %} {% include 'footer.html' %}{% endblock footer %}
+    
+
+    
