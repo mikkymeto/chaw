@@ -341,6 +341,7 @@ def removecart(request):
        removedish.delete()
        messages.success(request, 'cart removed successfully')
     return redirect('mycart')
+    
 
 @login_required(login_url='signin')
 def deletemeal(request):
