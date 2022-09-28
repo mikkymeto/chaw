@@ -1,11 +1,8 @@
-from base64 import urlsafe_b64decode
-from cgitb import reset
-import email
 import requests
 import json
 import uuid
 
-from multiprocessing import context
+# from multiprocessing import context
 from django.shortcuts import render, redirect, HttpResponse
 from django.contrib.auth import logout, login, authenticate
 from django.contrib.auth.forms import PasswordChangeForm
@@ -341,7 +338,7 @@ def removecart(request):
        removedish.delete()
        messages.success(request, 'cart removed successfully')
     return redirect('mycart')
-    
+
 
 @login_required(login_url='signin')
 def deletemeal(request):
