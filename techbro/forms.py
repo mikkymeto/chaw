@@ -1,7 +1,3 @@
-from dataclasses import fields
-import email
-from logging import PlaceHolder
-from tkinter import Widget
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
